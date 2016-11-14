@@ -14,7 +14,7 @@ def index():
 def get_drive(driveleft,driveright):
     global count
     count+=1
-    print("socket {0}:    {1}    |    {2} ".format(count,driveleft,driveright))
+    print("socket {0}:   {1}    |    {2} ".format(count,driveleft,driveright))
 
 if __name__ == "__main__":
     socketio.run(app, host='0.0.0.0', port = 9000, debug=True)
