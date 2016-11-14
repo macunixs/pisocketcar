@@ -1,3 +1,3 @@
 # pisocketcar
 
-This project is to build a controllable robot using WiFi.
+# This project will teach you how to build a controllable robot using WiFi.
