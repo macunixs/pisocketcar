@@ -1,4 +1,4 @@
-# pisocketcar
+# Remote control tri-wheel car using WiFi + socketio
 
 # This project will teach you how to build a controllable robot using WiFi.
 
@@ -18,4 +18,4 @@ Requirement to run this project:
 
 7 - WiFi network (local for both Raspberry Pi and the smartphone)
 
-# All files needed are included. No additional files/installation required other than the modules above.
+# All files needed are included. No additional files/installation required other than the modules listed above.
