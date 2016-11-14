@@ -167,3 +167,4 @@ if __name__ == "__main__":
     finally:
         t1.stop()
         GPIO.cleanup()
+        
