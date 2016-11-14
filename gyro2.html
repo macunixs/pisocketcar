@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <title>GyroControlRaspberryPiCar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script>
+
+function init()
+{
+	if (window.DeviceOrientationEvent) {
+		
+		window.addEventListener("deviceorientation", function(event) 
+		{
+			document.getElementById("y").style.webkitTransform = "scaleY("+(Math.round(event.beta))+")";
+ 
+			document.getElementById("x").style.webkitTransform = "scaleX("+(Math.round(event.gamma))+")";
+
+			document.getElementById("angle").style.webkitTransform = "rotateZ("+(Math.round(event.alpha))+"deg)";
+			
+		    document.getElementById("bothaxis").innerHTML = "x = " + Math.round(event.gamma) + "    y = " + Math.round(event.beta) + " " ; 
+
+		}, true);
+		
+		
+		
+	} else {
+  	alert("Sorry, your browser doesn't support Device Orientation");
+	} 
+}
+
+</script>
+
+
+
+</head>
+<body onload="init()">
+   <h1 id="title">Gyro test </h1>
+
+   <h1 id="bothaxis"> x | y </h1>
+
+   <div id="x" class="line"></div>
+   <div id="y" class ="line"></div>
+   <div id="angle"></div>
+   <div id="guideX"></div>
+   <div id="guideY"></div>
+</body>
+
+</html>
